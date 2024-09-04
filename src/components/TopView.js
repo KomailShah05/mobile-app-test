@@ -13,8 +13,9 @@ const TopView = () => {
       style={{
         flexDirection: 'row',
         paddingHorizontal: 10,
-        paddingVertical: 20,
+        paddingVertical: 24,
         alignItems: 'center',
+        marginTop: 130,
         justifyContent: 'space-between',
       }}>
       <ImageComponent imagePath={avatarImage} />

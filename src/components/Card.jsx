@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Button,
-  Image,
-  StyleSheet,
-  Text,
-  Touchable,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
 
 import avatarImage from '../assets/avatar.png';
 import societyImage from '../assets/society.png';
@@ -19,10 +11,12 @@ import person_3 from '../assets/person_3.png';
 import LikeIcon from '../images/LikeIcon';
 import comment from '../assets/comment.png';
 import share from '../assets/share.png';
+import link from '../assets/Link.png';
+import poll from '../assets/Poll.png';
 
 import {styles} from './styles';
 
-const Card = () => {
+const Card = ({view, title, description}) => {
   return (
     <View style={styles.container}>
       <View style={{...styles.flexStyle, justifyContent: 'space-between'}}>
@@ -42,19 +36,28 @@ const Card = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.cardTextSpacing}>
-        <Text style={{...styles.cardText, fontWeight: '800'}}>
-          Digital nomad visa in Portugal - my experience as web developer
-        </Text>
+        <Text style={{...styles.cardText, fontWeight: '800'}}>{title}</Text>
         <Text style={{...styles.cardText, color: '#1E1F24', marginTop: 4}}>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo.
+          {description}
         </Text>
       </View>
       <View style={styles.imageView}>
-        <Image source={image_1} style={styles.postImage} />
-        <Image source={image_1} style={styles.postImage} />
+        {view === 'image' ? (
+          <>
+            <Image source={image_1} style={styles.postImage} />
+            <Image source={image_1} style={styles.postImage} />
+          </>
+        ) : view === 'link' ? (
+          <>
+            <Image source={link} style={{width: '100%', height: 268}} />
+          </>
+        ) : view === 'poll' ? (
+          <>
+            <Image source={poll} style={{width: '100%', height: 214}} />
+          </>
+        ) : (
+          <></>
+        )}
       </View>
       <View style={styles.commentViewBox}>
         <View style={styles.flexStyle}>
@@ -96,17 +99,23 @@ const Card = () => {
             </Text>
           </View>
         </View>
-        <View style={styles.commentBox}>
-          <View style={styles.flexStyle}>
-            <Image source={avatarImage} />
-            <View style={styles.commentText}>
-              <Text style={{...styles.text, color: '#1E1F24'}}>Jane Smith</Text>
-              <Text style={{...styles.text, color: '#62636C'}}>
-                Welcome to Portugal!
-              </Text>
+        {view === 'image' ? (
+          <View style={styles.commentBox}>
+            <View style={styles.flexStyle}>
+              <Image source={avatarImage} />
+              <View style={styles.commentText}>
+                <Text style={{...styles.text, color: '#1E1F24'}}>
+                  Jane Smith
+                </Text>
+                <Text style={{...styles.text, color: '#62636C'}}>
+                  Welcome to Portugal!
+                </Text>
+              </View>
             </View>
           </View>
-        </View>
+        ) : (
+          <></>
+        )}
       </View>
     </View>
   );

@@ -1,12 +1,14 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from 'react';
+import {View, Text} from 'react-native';
+import TopView from '../../../components/TopView';
 
 const Groups = () => {
-    return (
-        <View>
-            <Text>Groups</Text>
-        </View>
-    )
-}
+  return (
+    <View>
+      <TopView />
+      <Text>Groups</Text>
+    </View>
+  );
+};
 
-export default Groups
+export default Groups;

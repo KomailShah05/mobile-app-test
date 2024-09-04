@@ -1,12 +1,14 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React from 'react';
+import {View, Text} from 'react-native';
+import TopView from '../../../components/TopView';
 
 const MyPosts = () => {
-    return (
-        <View>
-            <Text>MyPosts</Text>
-        </View>
-    )
-}
+  return (
+    <View>
+      <TopView />
+      <Text>MyPosts</Text>
+    </View>
+  );
+};
 
-export default MyPosts
+export default MyPosts;
