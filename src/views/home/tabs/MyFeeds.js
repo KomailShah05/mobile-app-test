@@ -1,10 +1,13 @@
 import React from 'react'
 import { View, Text } from 'react-native'
+import TopView from '../../../components/TopView'
+import LineView from '../../../components/LineView'
 
 const MyFeeds = () => {
     return (
         <View>
-            <Text>MyFeeds</Text>
+            <TopView />
+            <LineView />
         </View>
     )
 }

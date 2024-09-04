@@ -6,5 +6,7 @@ export default Color = {
     red: 'red',
     background: '#A4AAC9',
     inavtiveTabLable: '#62636C',
-    activeTabLabel: '#1E1F24'
+    activeTabLabel: '#1E1F24',
+    textViewColor: '#00104010',
+    lineColor: '#000B3618'
 }

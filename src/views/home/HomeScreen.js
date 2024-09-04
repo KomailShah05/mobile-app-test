@@ -5,6 +5,7 @@ import Color from '../../styles/Color';
 import MyFeeds from './tabs/MyFeeds';
 import MyPosts from './tabs/MyPosts';
 import Groups from './tabs/Groups';
+import Header from '../../components/Header';
 
 
 
@@ -44,6 +45,7 @@ export default function HomeScreen() {
 
     return (
         <View style={styles.mainContainer}>
+            <Header />
             <TabView
                 navigationState={{ index, routes }}
                 renderScene={renderScene}
@@ -58,8 +60,9 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
-        paddingTop: 40,
-        backgroundColor: Color.white
+        paddingTop: 60,
+        backgroundColor: Color.white,
+
     },
     tabBar: {
         backgroundColor: 'white',
