@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 25,
     width: '100%',
     position: 'absolute',
-    bottom: 0,
+    bottom: Platform.OS == 'android' ? 0 : 10,
     height: 59,
     backgroundColor: 'white',
     zIndex: 100,
