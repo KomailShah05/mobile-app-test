@@ -55,26 +55,10 @@
   <dict>
   <key>CFBundleURLSchemes</key>
   <array>
-    <string>fb991719642637756</string>
-	<string>com.googleusercontent.apps.337530942951-ggfhkpsbtjv9sk4sbql5lcq6rfkce53p</string>
-
+   
   </array>
   </dict>
 </array>
-<key>FacebookAppID</key>
-<string>991719642637756</string>
-<key>FacebookDisplayName</key>
-<string>Sample</string>
-<key>FacebookClientToken</key>
-    <string>45ee83f2e6a1148acfb3e258dc906441</string>
-<key>LSApplicationQueriesSchemes</key>
-<array>
-  <string>fbapi</string>
-  <string>fb-messenger-api</string>
-  <string>fbauth2</string>
-  <string>fbshareextension</string>
-</array>
-<key>NSUserTrackingUsageDescription</key>
-    <string>This app uses device identifiers to track marketing attribution and app usage.  Your data is kept confidential and is not shared with any 3rd parties or advertising partners.</string>
+ 
 </dict>
 </plist>

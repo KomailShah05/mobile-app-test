@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   mainContainer: {
@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
   },
   tabBarContainer: {
     position: 'absolute',
-    top: 80, // Adjust based on header height
+    top: Platform.OS == 'android' ? 80 : 100, // Adjust based on header height
     left: 0,
     right: 0,
     height: 50, // Adjust as needed
@@ -29,10 +29,9 @@ export const styles = StyleSheet.create({
   },
   header: {
     position: 'absolute',
-    top: 30,
+    top: Platform.OS == 'android' ? 30 : 60,
     left: 0,
     right: 0,
-    height: 60, // Adjust as needed
     backgroundColor: 'white',
     zIndex: 1,
   },

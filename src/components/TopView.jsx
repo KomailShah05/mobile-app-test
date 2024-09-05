@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, TextInput} from 'react-native';
+import { View, Text, Image, TextInput } from 'react-native';
 import Color from '../styles/Color';
 import ImageComponent from './ImageComponent';
 import avatarImage from '../assets/avatar.png'; // Import the image
@@ -15,7 +15,7 @@ const TopView = () => {
         paddingHorizontal: 10,
         paddingVertical: 24,
         alignItems: 'center',
-        marginTop: 130,
+        marginTop: Platform.OS == 'android' ? 130 : 150,
         justifyContent: 'space-between',
       }}>
       <ImageComponent imagePath={avatarImage} />
